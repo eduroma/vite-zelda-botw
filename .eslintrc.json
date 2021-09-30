@@ -64,7 +64,8 @@
             {
                 "allowShortCircuit": true
             }
-        ]
+        ],
+        "eqeqeq": "error"
     },
     "settings": {
         "import/resolver": {
