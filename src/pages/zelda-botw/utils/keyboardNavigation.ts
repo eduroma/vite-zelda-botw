@@ -1,5 +1,5 @@
-const COLUMNS_NUMBER = 5
-const ROWS_NUMBER = 4
+export const COLUMNS_NUMBER = 5
+export const ROWS_NUMBER = 4
 
 type PositionType = {
   x: number
@@ -28,12 +28,18 @@ export const goDown = (position: PositionType): PositionType => ({
   y: position.y,
 })
 
-export const goLeft = (position: PositionType): PositionType => ({
-  x: position.x,
-  y: Math.max(position.y - 1, 0),
-})
+export const goLeft = (position: PositionType): PositionType => {
+  const newPosition = position.y - 1
+  return {
+    x: position.x,
+    y: newPosition < 0 ? COLUMNS_NUMBER - 1 : newPosition,
+  }
+}
 
-export const goRight = (position: PositionType): PositionType => ({
-  x: position.x,
-  y: Math.min(position.y + 1, COLUMNS_NUMBER - 1),
-})
+export const goRight = (position: PositionType): PositionType => {
+  const newPosition = position.y + 1
+  return {
+    x: position.x,
+    y: newPosition % COLUMNS_NUMBER,
+  }
+}

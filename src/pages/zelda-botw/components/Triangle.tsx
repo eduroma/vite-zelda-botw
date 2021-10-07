@@ -15,9 +15,8 @@ const Triangle: React.FC<Props> = ({ animateParams, className }) => (
     initial={animateParams}
     animate={animateParams}
     transition={{
-      loop: Infinity,
-      ease: 'easeIn',
-      duration: 1,
+      repeat: Infinity,
+      repeatType: 'loop',
     }}
     className={className}
   />

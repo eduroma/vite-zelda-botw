@@ -1,6 +1,20 @@
+export enum ItemsMainCategoriesType {
+  WEAPONS = 'weapons',
+  SHIELDS = 'shields',
+  ARMORS = 'armors',
+}
+
+export enum ItemCategoriesType {
+  ARMOR = 'armor',
+  SHIELD = 'shield',
+  WEAPON = 'weapon',
+  HELM = 'helm',
+  GREAVE = 'greave',
+}
+
 export type ItemType = {
   name: string
-  category: string
+  category: ItemCategoriesType
   icon: string
   value: string
   description: string
@@ -8,8 +22,12 @@ export type ItemType = {
   isNew?: boolean
 }
 
-type ItemsType = {
-  [key: string]: ItemType[]
+export type ItemsPage = {
+  items: ItemType[]
+  mainCategory: ItemsMainCategoriesType
+  page: number
 }
 
-export default ItemsType
+export type ItemsType = {
+  [key: string]: ItemType[]
+}

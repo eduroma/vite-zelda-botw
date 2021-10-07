@@ -1,8 +1,10 @@
+import { ItemCategoriesType, ItemsMainCategoriesType } from './items.type'
+
 export default {
-  weapons: [
+  [ItemsMainCategoriesType.WEAPONS]: [
     {
       name: 'Tree Branch',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Tree_Branch_Icon.png`,
       value: '2',
       isNew: true,
@@ -11,7 +13,7 @@ export default {
     },
     {
       name: 'Ancient Short Sword',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Ancient_Short_Sword_Icon.png`,
       value: '40',
       description:
@@ -19,7 +21,7 @@ export default {
     },
     {
       name: 'Dragonbone Boko Club',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Dragonbone_Boko_Club_Icon.png`,
       value: '24',
       isNew: true,
@@ -28,7 +30,7 @@ export default {
     },
     {
       name: 'Feathered Edge',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Feathered_Edge_Icon.png`,
       value: '15',
       description:
@@ -36,7 +38,7 @@ export default {
     },
     {
       name: 'Flameblade',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Flameblade_Icon.png`,
       value: '24',
       description:
@@ -44,7 +46,7 @@ export default {
     },
     {
       name: "Soldier's Broadsword",
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       isNew: true,
       icon: `/items/weapons/BotW_Soldier's_Broadsword_Icon.png`,
       value: '14',
@@ -53,7 +55,7 @@ export default {
     },
     {
       name: 'Royal Claymore',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Royal_Claymore_Icon.png`,
       value: '52',
       description:
@@ -61,17 +63,17 @@ export default {
     },
     {
       name: 'Master Sword',
-      category: 'weapon',
+      category: ItemCategoriesType.WEAPON,
       icon: `/items/weapons/BotW_Master_Sword_Icon.png`,
       value: '30',
       description:
         'The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it.',
     },
   ],
-  shields: [
+  [ItemsMainCategoriesType.SHIELDS]: [
     {
       name: 'Wooden Shield',
-      category: 'shield',
+      category: ItemCategoriesType.SHIELD,
       icon: `/items/shields/BotW_Wooden_Shield_Icon.png`,
       value: '2',
       description:
@@ -79,7 +81,7 @@ export default {
     },
     {
       name: "BotW Traveler's Shield",
-      category: 'shield',
+      category: ItemCategoriesType.SHIELD,
       icon: `/items/shields/BotW_Traveler's_Shield_Icon.png`,
       value: '4',
       description:
@@ -87,7 +89,7 @@ export default {
     },
     {
       name: 'BotW Gerudo Shield',
-      category: 'shield',
+      category: ItemCategoriesType.SHIELD,
       isNew: true,
       icon: `/items/shields/BotW_Gerudo_Shield_Icon.png`,
       value: '20',
@@ -96,17 +98,17 @@ export default {
     },
     {
       name: 'BotW Ancient Shield',
-      category: 'shield',
+      category: ItemCategoriesType.SHIELD,
       icon: `/items/shields/BotW_Ancient_Shield_Icon.png`,
       value: '70',
       description:
         'This shield was made using ancient Sheikah technology. Its surface glows blue when raised in defense. Enhanced functionality allows it to deflect Guardian beams.',
     },
   ],
-  armors: [
+  [ItemsMainCategoriesType.ARMORS]: [
     {
       name: 'Zora Helm',
-      category: 'helm',
+      category: ItemCategoriesType.HELM,
       icon: `/items/armors/BotW_Zora_Helm_Icon.png`,
       value: '3',
       bonus: 'swimming',
@@ -115,7 +117,7 @@ export default {
     },
     {
       name: 'Zora Armor',
-      category: 'armor',
+      category: ItemCategoriesType.ARMOR,
       icon: `/items/armors/BotW_Zora_Armor_Icon.png`,
       value: '3',
       bonus: 'swimming',
@@ -124,7 +126,7 @@ export default {
     },
     {
       name: 'Zora Greaves',
-      category: 'greave',
+      category: ItemCategoriesType.GREAVE,
       icon: `/items/armors/BotW_Zora_Greaves_Icon.png`,
       value: '3',
       bonus: 'swimming',
@@ -133,7 +135,7 @@ export default {
     },
     {
       name: "Climber's Bandanna",
-      category: 'helm',
+      category: ItemCategoriesType.HELM,
       icon: `/items/armors/BotW_Climber's_Bandanna_Icon.png`,
       value: '3',
       bonus: 'climbing',
@@ -142,7 +144,7 @@ export default {
     },
     {
       name: 'Climbing Gear',
-      category: 'armor',
+      category: ItemCategoriesType.ARMOR,
       icon: `/items/armors/BotW_Climbing_Gear_Icon.png`,
       value: '3',
       bonus: 'climbing',
@@ -151,7 +153,7 @@ export default {
     },
     {
       name: 'Climbing Boots',
-      category: 'greave',
+      category: ItemCategoriesType.GREAVE,
       icon: `/items/armors/BotW_Climbing_Boots_Icon.png`,
       value: '3',
       bonus: 'climbing',
@@ -160,7 +162,7 @@ export default {
     },
     {
       name: 'Flamebreaker Helm',
-      category: 'helm',
+      category: ItemCategoriesType.HELM,
       icon: `/items/armors/BotW_Flamebreaker_Helm_Icon.png`,
       value: '3',
       bonus: 'fire',
@@ -169,7 +171,7 @@ export default {
     },
     {
       name: 'Flamebreaker Armor',
-      category: 'armor',
+      category: ItemCategoriesType.ARMOR,
       icon: `/items/armors/BotW_Flamebreaker_Armor_Icon.png`,
       value: '3',
       bonus: 'fire',
@@ -178,7 +180,7 @@ export default {
     },
     {
       name: 'Flamebreaker Boots',
-      category: 'greave',
+      category: ItemCategoriesType.GREAVE,
       icon: `/items/armors/BotW_Flamebreaker_Boots_Icon.png`,
       value: '3',
       bonus: 'fire',
@@ -187,7 +189,7 @@ export default {
     },
     {
       name: 'Cap of the Hero',
-      category: 'helm',
+      category: ItemCategoriesType.HELM,
       icon: `/items/armors/BotW_Cap_of_the_Hero_Icon.png`,
       value: '3',
       bonus: 'normal',
@@ -196,7 +198,7 @@ export default {
     },
     {
       name: "Champion's Tunic",
-      category: 'armor',
+      category: ItemCategoriesType.ARMOR,
       isNew: true,
       icon: `/items/armors/BotW_Champion's_Tunic_Icon.png`,
       value: '5',
@@ -206,7 +208,7 @@ export default {
     },
     {
       name: 'Hylian Trousers',
-      category: 'greave',
+      category: ItemCategoriesType.GREAVE,
       isNew: true,
       icon: `/items/armors/BotW_Hylian_Trousers_Icon.png`,
       value: '3',

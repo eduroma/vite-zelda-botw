@@ -1,22 +1,33 @@
 import items from '../data/items'
-import { ItemType } from '../data/items.type'
-import { itensCategory } from '../enums/itensCategory'
+import {
+  ItemCategoriesType,
+  ItemsMainCategoriesType,
+  ItemsPage,
+} from '../data/items.type'
 
 const emptyItem = {
   name: '',
   icon: '',
   value: '',
   description: '',
-  category: itensCategory.WEAPONS,
+  category: ItemCategoriesType.WEAPON,
 }
 
-const getItems = (
-  category = itensCategory.WEAPONS,
-  itemsPerPage = 20
-): ItemType[] => {
-  const itemsGrid = items[category].concat(
-    new Array(itemsPerPage - items[category].length).fill(emptyItem)
-  )
+const getItems = (itemsPerPage = 20): ItemsPage[] => {
+  const itemsGrid: ItemsPage[] = []
+
+  Object.keys(items).forEach((itemsCategory) => {
+    const mainItemsCategory = itemsCategory as ItemsMainCategoriesType
+    const newPage = items[mainItemsCategory].concat(
+      new Array(itemsPerPage - items[mainItemsCategory].length).fill(emptyItem)
+    )
+
+    itemsGrid.push({
+      items: newPage,
+      mainCategory: mainItemsCategory,
+      page: 0,
+    })
+  })
 
   return itemsGrid
 }
