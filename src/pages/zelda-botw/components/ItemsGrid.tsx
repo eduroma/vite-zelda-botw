@@ -42,7 +42,10 @@ const ItemsGrid: React.FC<Props> = ({ items, page, direction }) => (
         name={item.name}
         icon={item.icon}
         value={item.value}
+        category={item.category}
+        bonus={item.bonus}
         itemIndex={index}
+        isNew={item.isNew}
       />
     ))}
   </motion.div>

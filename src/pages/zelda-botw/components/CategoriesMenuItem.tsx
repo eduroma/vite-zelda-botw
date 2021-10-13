@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { Dispatch, SetStateAction } from 'react'
+import React, { Dispatch, SetStateAction, useContext } from 'react'
 import cx from 'classnames'
+import SoundContext from '../hooks/SoundContext'
 
 type Props = {
   page: number
@@ -14,21 +15,26 @@ const CategoriesMenuItem: React.FC<Props> = ({
   setPage,
   isSelected,
   children,
-}) => (
-  <div
-    onClick={() => {
-      setPage([page, 0])
-    }}
-    className={cx(
-      {
-        'text-white border-white': isSelected,
-        'text-zelda-lightGray border-zelda-lightGray': !isSelected,
-      },
-      'border-b cursor-pointer'
-    )}
-  >
-    {children}
-  </div>
-)
+}) => {
+  const { playAction } = useContext(SoundContext)
+
+  return (
+    <div
+      onClick={() => {
+        setPage([page, 0])
+        playAction()
+      }}
+      className={cx(
+        {
+          'text-white border-white': isSelected,
+          'text-zelda-lightGray border-zelda-lightGray': !isSelected,
+        },
+        'border-b cursor-pointer'
+      )}
+    >
+      {children}
+    </div>
+  )
+}
 
 export default CategoriesMenuItem

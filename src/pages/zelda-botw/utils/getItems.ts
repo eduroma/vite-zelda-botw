@@ -5,7 +5,7 @@ import {
   ItemsPage,
 } from '../data/items.type'
 
-const emptyItem = {
+export const emptyItem = {
   name: '',
   icon: '',
   value: '',
